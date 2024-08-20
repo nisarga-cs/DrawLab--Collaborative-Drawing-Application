@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DrawLab- Collaborative Drawing Appication</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/javacripts/paper.js"></script>  
+  <script src="../javacripts/socket.js"></script>
+   
+  <link rel="stylesheet" href="styleEditor.css">
+</head>
+
+  <div id="canvasOuter">
+  <canvas id="myCanvas" width="1000" height="550"></canvas>
+  <canvas id="previewCanvas" width="1000" height="550"></canvas>
+  <canvas id="cursorCanvas" width="1000" height="550"></canvas>
+
+  </div>
+
+  <div id="toolbar">
+    <button class = "paletteTool" id="pencil">Pencil</button>
+    <button class = "paletteTool"  id="eraser">Eraser</button>
+    <button class = "paletteTool" id="brush">Brush</button>
+    <button class = "paletteTool" id="spray">Spray</button>
+    <button class = "paletteTool" id="clear">Clear</button>
+    <button class = "paletteTool" id="undo">Undo</button>
+    <button class = "paletteTool" id="redo">Redo</button>
+    
+    <div class = "paletteTool">
+    <b>Text Input</b>
+    <input  type="text" id="textInput" placeholder="Enter your text">
+  </div>
+    <!-- <input class = "paletteTool" type="range" id="fontSizeSlider" min="10" max="48" value="16"> -->
+    <div class="paletteTool">
+      <b>Font Size</b>
+    <select  id="fontSizeSelect">
+      <option value="10">10</option>
+      <option value="12">12</option>
+      <option value="14" selected>14</option>
+      <option value="16">16</option>
+      <option value="18">18</option> 
+      <option value="20">20</option>
+      <option value="24">24</option>
+      <option value="28">28</option>
+      <option value="32">32</option>
+      <option value="36">36</option>
+      <option value="40">40</option>
+      <option value="44">44</option>
+      <option value="48">48</option> 
+      </select>
+  </div>
+
+    <div class = "paletteTool">
+      <b>Text Font</b>
+      <select class = "paletteTool" id="fontSelect">
+        <option value="default">Arial</option>
+      </select>
+    </div>
+    <button class = "paletteTool" id="applyText" >Write Text</button>
+    
+    <div id="shapePanel">
+      <button class = "paletteTool" id="line">Line</button>
+      <button class = "paletteTool" id="rectangle">Rectangle</button>
+      <button class = "paletteTool" id="circle">Circle</button>
+      
+    </div>
+
+    <div class = "paletteTool"><b>Stroke size</b>
+    <input type="range" id="sizeSlider" min="2" max="60" value="5"></div>
+    <div class = "paletteTool"><b>Stoke Colour </b><input type="color" id="colorPicker"></div>
+  </div>
+ 
+  <script src="EditorScript.js"></script>
+  
+</body>
+</html>

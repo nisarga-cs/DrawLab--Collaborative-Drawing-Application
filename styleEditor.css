@@ -1,0 +1,72 @@
+/*html{
+    background-color: rgb(28, 34, 34);
+}*/
+
+#myCanvas {
+    border-radius: 3%;
+    border: 5px solid black;
+    z-index: 0;
+    /*background-color: white;*/
+
+
+  }
+
+#previewCanvas {
+    border-radius: 3%;
+    border: 6px solid darkslategrey;
+    position: absolute;
+    pointer-events: none;
+    top: 0; right: 0;
+    z-index: 1;
+    
+    margin: 6px;
+    float: right;
+   
+}
+#cursorCanvas{
+    border-radius: 3%;
+    z-index: 2;
+    border: 6px solid darkslategrey;
+    position: absolute;
+    pointer-events: none;
+    top: 0; right: 0;
+    margin: 6px;
+    float: right;
+}
+
+.paletteTool{
+    margin: 2px; 
+    background-color: rgb(143, 141, 148);
+    border-radius: 10%;
+    border-color: rgb(37, 43, 43);
+    width: fit-content;
+    
+}
+
+.paletteTool:hover{
+    border-color: rgb(192, 188, 224);
+    
+
+}
+
+#shapePanel{
+    border: 1px solid black;
+    width: fit-content + 1px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3%;
+}
+
+#canvasOuter{
+    float: right;
+}
+#toolbar{
+    border: 1px solid black;
+    width: 310px;
+    height: fit-content;
+    float: left;
+    padding: 5px;
+    
+    border-radius: 3%;
+}
+    
